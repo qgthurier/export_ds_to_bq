@@ -1,0 +1,42 @@
+cron:
+- description: daily DS extract for report 1
+  url: /launch_ds_job?request=1
+  schedule: every day 07:00
+  timezone: Europe/Paris
+  target: 1
+- description: upload report 1 to gcs
+  url: /upload_to_gcs
+  schedule: every day 07:10
+  timezone: Europe/Paris
+  target: 1
+- description: import report 1 into big query
+  url: /import_into_bq
+  schedule: every day 07:20
+  timezone: Europe/Paris
+  target: 1
+- description: daily DS extract for report 2
+  url: /launch_ds_job?request=2
+  schedule: every day 07:30
+  timezone: Europe/Paris
+  target: 1
+- description: upload report 2 to gcs
+  url: /upload_to_gcs
+  schedule: every day 07:40
+  timezone: Europe/Paris
+  target: 1
+- description: import report 2 into big query
+  url: /import_into_bq
+  schedule: every day 07:50
+  timezone: Europe/Paris
+  target: 1
+- description: daily check for DS report
+  url: /left_join
+  schedule: every day 08:00
+  timezone: Europe/Paris
+  target: 1
+- description: daily check for DS report
+  url: /check
+  schedule: every day 08:10
+  timezone: Europe/Paris
+  target: 1
+

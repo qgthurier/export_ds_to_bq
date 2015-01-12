@@ -1,0 +1,22 @@
+application: singular-silo-638
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /launch_ds_job
+  script: main.app
+  login: admin
+- url: /upload_to_gcs
+  script: main.app
+  login: admin
+- url: /import_into_bq
+  script: main.app
+  login: admin
+- url: /left_join
+  script: main.app
+  login: admin
+- url: /check
+  script: main.app
+  login: admin
